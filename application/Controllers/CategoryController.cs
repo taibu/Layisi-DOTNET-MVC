@@ -13,7 +13,9 @@ public class CategoryController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    [Route("Category/{id?}")]
+    [Route("Category/{id?}/{id2?}")]
+    public IActionResult Index(string id,string id2)
     {
         return View();
     }
